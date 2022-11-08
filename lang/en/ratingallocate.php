@@ -452,10 +452,21 @@ $string['privacy:metadata:preference:flextable_filter'] = 'Stores the filters th
 $string['privacy:metadata:preference:flextable_manual_filter'] =
         'Stores the filters that are applied to the manual allocations table.';
 
+// Language strings for filtering reports tables.
 $string['filtertabledesc'] = 'Describes the filters that are applied to the allocation table.';
 $string['filtermanualtabledesc'] = 'Describes the filters that are applied to the table of the manual allocation form.';
+
 $string['filtergroup'] = 'Group filter';
 $string['filtergroup_help'] = '* Select a group in order to filter course participants according to the groups they are in,
 and ratable choices by groups that had the ability to access them.
 * Only groups used in the *use groups* option can be selected.
 * If *no group* is selected, users that are in none of the groups used by a choice are shown.';
+
+// Language strings for activity tracking.
+$string['votetracking'] = "Students must submit votes to complete it.";
+$string['votetrackingdesc_user'] = "Submit your preferences";
+$string['votetrackingenableddesc'] = "To complete this activity, users have to submit their preferences";
+
+$string['assignedtracking'] = "Students must be allocated to complete it.";
+$string['assignedtrackingdesc_user'] = "Wait to be assigned to a choice";
+$string['assignedtrackingdesc'] = "To complete this activity, users have to be allocated to a choice";
