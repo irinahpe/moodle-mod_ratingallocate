@@ -33,8 +33,9 @@ class custom_completion extends \core_completion\activity_custom_completion {
 
     public function get_sort_order(): array {
         return [
+            'completionview',
             'votetrackingenabled',
-            'assignedtrackingenabled',
+            'assignedtrackingenabled'
         ];
     }
 

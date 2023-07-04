@@ -300,13 +300,17 @@ class mod_ratingallocate_mod_form extends moodleform_mod {
 
     /**
      * Add elements for setting the custom completion rules.
+     *
      * @category completion
      * @return array List of added element names, or names of wrapping group elements.
      */
     public function add_completion_rules() {
+
         $mform = $this->_form;
-        $mform->addElement('checkbox', 'votetrackingenabled', ' ', get_string('votetracking', 'ratingallocate'));
-        $mform->addElement('checkbox', 'assignedtrackingenabled', ' ', get_string('assignedtracking', 'ratingallocate'));
+
+        $mform->addElement('checkbox', 'votetrackingenabled', get_string('votetracking', 'ratingallocate'), get_string('votetrackingdesc', 'ratingallocate'));
+        $mform->addElement('checkbox', 'assignedtrackingenabled', get_string('assignedtracking', 'ratingallocate'), get_string('assignedtrackingdesc', 'ratingallocate'));
+
         return ['votetrackingenabled', 'assignedtrackingenabled'];
     }
 
@@ -322,10 +326,10 @@ class mod_ratingallocate_mod_form extends moodleform_mod {
 
     function data_preprocessing(&$default_values){
         if(empty($default_values['votetrackingenabled'])) {
-            $default_values['votetrackingenabled'] = 1;
+            $default_values['votetrackingenabled'] = 0;
         }
         if(empty($default_values['assignedtrackingenabled'])) {
-            $default_values['assignedtrackingenabled'] = 1;
+            $default_values['assignedtrackingenabled'] = 0;
         }
     }
 

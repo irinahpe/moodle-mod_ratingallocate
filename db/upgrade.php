@@ -218,24 +218,24 @@ function xmldb_ratingallocate_upgrade($oldversion) {
         upgrade_mod_savepoint(true, 2023050900, 'ratingallocate');
     }
 
-    if ($oldversion < 2023063003) {
+    if ($oldversion < 2023070402) {
 
-        // Add the custom tracking option.
+        // Add the vote tracking option.
         $table = new xmldb_table('ratingallocate');
-        $field = new xmldb_field('votetrackingenabled', XMLDB_TYPE_CHAR, null, XMLDB_NOTNULL, null, 1);
+        $field = new xmldb_field('votetrackingenabled', XMLDB_TYPE_INTEGER, 1, null, XMLDB_NOTNULL, null, 0);
 
         if (!$dbman->field_exists($table, $field)) {
             $dbman->add_field($table, $field);
         }
 
-        // Add the custom tracking option.
+        // Add the allocation tracking option.
         $table = new xmldb_table('ratingallocate');
-        $field = new xmldb_field('assignedtrackingenabled', XMLDB_TYPE_CHAR, null, XMLDB_NOTNULL, null, 1);
+        $field = new xmldb_field('assignedtrackingenabled', XMLDB_TYPE_INTEGER, 1, null, XMLDB_NOTNULL, null, 0);
 
         if (!$dbman->field_exists($table, $field)) {
             $dbman->add_field($table, $field);
         }
-        upgrade_mod_savepoint(true, 2023063001, 'ratingallocate');
+        upgrade_mod_savepoint(true, 2023070402, 'ratingallocate');
     }
 
     return true;

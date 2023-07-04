@@ -1684,7 +1684,7 @@ class ratingallocate {
 
             $completion = new completion_info($this->course);
             if ($completion->is_enabled($this->coursemodule)) {
-                $completion->update_state($this->coursemodule, COMPLETION_UNKNOWN, $userid);
+                $completion->update_state($this->coursemodule, COMPLETION_INCOMPLETE, $userid);
             }
 
             // Logging.
@@ -1744,7 +1744,7 @@ class ratingallocate {
 
             $completion = new completion_info($this->course);
             if ($completion->is_enabled($this->coursemodule)) {
-                $completion->update_state($this->coursemodule, COMPLETION_UNKNOWN, $userid);
+                $completion->update_state($this->coursemodule, COMPLETION_COMPLETE, $userid);
             }
 
             $completion->set_module_viewed($this->coursemodule);
@@ -1927,7 +1927,7 @@ class ratingallocate {
         ));
         $completion = new completion_info($this->course);
         if ($completion->is_enabled($this->coursemodule)) {
-            $completion->update_state($this->coursemodule, COMPLETION_UNKNOWN, $userid);
+            $completion->update_state($this->coursemodule, COMPLETION_INCOMPLETE, $userid);
         }
         return true;
     }
@@ -1944,7 +1944,7 @@ class ratingallocate {
         ));
         $completion = new completion_info($this->course);
         if ($completion->is_enabled($this->coursemodule)) {
-            $completion->update_state($this->coursemodule, COMPLETION_UNKNOWN, $userid);
+            $completion->update_state($this->coursemodule, COMPLETION_INCOMPLETE, $userid);
         }
     }
 
@@ -1962,7 +1962,7 @@ class ratingallocate {
         ));
         $completion = new completion_info($this->course);
         if ($completion->is_enabled($this->coursemodule)) {
-            $completion->update_state($this->coursemodule, COMPLETION_UNKNOWN, $userid);
+            $completion->update_state($this->coursemodule, COMPLETION_COMPLETE, $userid);
         }
         return true;
     }

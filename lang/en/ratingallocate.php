@@ -463,10 +463,12 @@ and ratable choices by groups that had the ability to access them.
 * If *no group* is selected, users that are in none of the groups used by a choice are shown.';
 
 // Language strings for activity tracking.
-$string['votetracking'] = "Students must submit votes to complete it.";
+$string['votetracking'] = "Require voting";
+// $string['votetrackingdesc'] = "Students must submit votes to complete the activity.";
 $string['votetrackingdesc_user'] = "Submit your preferences";
-$string['votetrackingenableddesc'] = "To complete this activity, users have to submit their preferences";
+$string['votetrackingdesc'] = "To complete this activity, users have to submit their preferences";
 
-$string['assignedtracking'] = "Students must be allocated to complete it.";
+$string['assignedtracking'] = "Require allocation";
+// $string['assignedtrackingdesc'] = "Students must be allocated to complete the activity.";
 $string['assignedtrackingdesc_user'] = "Wait to be assigned to a choice";
 $string['assignedtrackingdesc'] = "To complete this activity, users have to be allocated to a choice";
